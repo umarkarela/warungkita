@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Warung Online - Pesan via WA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Warung Online</h1>
+
+  <!-- Input Nama Pembeli -->
+   <div class="menu-grid">
+  <div class="input-nama">
+    <label for="nama">Nama Pembeli:</label>
+    <input id="nama" type="text" placeholder="Masukkan nama kamu">
+  </div>
+  </div>
+
+  <!-- Menu Minuman -->
+  <div class="menu-grid">
+  <h2>Minuman</h2>
+  </div>
+  <div class="menu-grid">
+    <!-- Es Teh -->
+    <div class="menu-item">
+      <img src="esteh.jpg" alt="Es Teh">
+      <h3>Es Teh</h3>
+      <p class="harga">Rp5.000</p>
+      <div class="qty-control">
+        <button onclick="decreaseQty('Es Teh')">-</button>
+        <span id="qty-Es Teh">1</span>
+        <button onclick="increaseQty('Es Teh')">+</button>
+      </div>
+      <button onclick="addToCart('Es Teh', 5000)">Tambah</button>
+    </div>
+
+    <!-- Es Jeruk -->
+    <div class="menu-item">
+      <img src="esjeruk.jpg" alt="Es Jeruk">
+      <h3>Es Jeruk</h3>
+      <p class="harga">Rp5.000</p>
+      <div class="qty-control">
+        <button onclick="decreaseQty('Es Jeruk')">-</button>
+        <span id="qty-Es Jeruk">1</span>
+        <button onclick="increaseQty('Es Jeruk')">+</button>
+      </div>
+      <button onclick="addToCart('Es Jeruk', 5000)">Tambah</button>
+    </div>
+
+    <!-- Air Mineral -->
+    <div class="menu-item">
+      <img src="airmineral.jpg" alt="Air Mineral">
+      <h3>Air Mineral</h3>
+      <p class="harga">Rp5.000</p>
+      <div class="qty-control">
+        <button onclick="decreaseQty('Air Mineral')">-</button>
+        <span id="qty-Air Mineral">1</span>
+        <button onclick="increaseQty('Air Mineral')">+</button>
+      </div>
+      <button onclick="addToCart('Air Mineral', 5000)">Tambah</button>
+    </div>
+  </div>
+
+  <!-- Menu Makanan -->
+  <div class="menu-grid">
+  <h2>Makanan</h2>
+  </div>
+  <div class="menu-grid">
+    <!-- Nasi Goreng -->
+    <div class="menu-item">
+      <img src="nasigoreng.jpg" alt="Nasi Goreng">
+      <h3>Nasi Goreng</h3>
+      <p class="harga">Rp15.000</p>
+      <div class="qty-control">
+        <button onclick="decreaseQty('Nasi Goreng')">-</button>
+        <span id="qty-Nasi Goreng">1</span>
+        <button onclick="increaseQty('Nasi Goreng')">+</button>
+      </div>
+      <button onclick="addToCart('Nasi Goreng', 15000)">Tambah</button>
+    </div>
+
+    <!-- Mie Goreng -->
+    <div class="menu-item">
+      <img src="miegoreng.jpg" alt="Mie Goreng">
+      <h3>Mie Goreng</h3>
+      <p class="harga">Rp18.000</p>
+      <div class="qty-control">
+        <button onclick="decreaseQty('Mie Goreng')">-</button>
+        <span id="qty-Mie Goreng">1</span>
+        <button onclick="increaseQty('Mie Goreng')">+</button>
+      </div>
+      <button onclick="addToCart('Mie Goreng', 18000)">Tambah</button>
+    </div>
+    
+    <!--Kwetiau-->
+    <div class="menu-item">
+      <img src="nasigoreng.jpg" alt="Kwetiau">
+      <h3>Kwetiau</h3>
+      <p class="harga">Rp18.000</p>
+      <div class="qty-control">
+        <button onclick="decreaseQty('Kwetiau')">-</button>
+        <span id="qty-Kwetiau">1</span>
+        <button onclick="increaseQty('Kwetiau')">+</button>
+      </div>
+      <button onclick="addToCart('Kwetiau', 15000)">Tambah</button>
+    </div>
+    </div>
+
+  <!-- Menu makanan ringan -->
+  <div class="menu-grid">
+  <h2>Makanan ringan</h2>
+  </div>
+  <div class="menu-grid">
+   <!-- Kerupuk -->
+    <div class="menu-item">
+      <img src="kerupuk.jpg" alt="Kerupuk">
+      <h3>Kerupuk</h3>
+      <p class="harga">Rp3.000</p>
+      <div class="qty-control">
+        <button onclick="decreaseQty('Kerupuk')">-</button>
+        <span id="qty-Kerupuk">1</span>
+        <button onclick="increaseQty('Kerupuk')">+</button>
+      </div>
+      <button onclick="addToCart('Kerupuk', 3000)">Tambah</button>
+</div>
+  <!-- mendoan -->
+   <div class="menu-item">
+      <img src="kerupuk.jpg" alt="Mendoan">
+      <h3>Mendoan</h3>
+      <p class="harga">Rp1.000</p>
+      <div class="qty-control">
+        <button onclick="decreaseQty('Mendoan')">-</button>
+        <span id="qty-Mendoan">1</span>
+        <button onclick="increaseQty('Mendoan')">+</button>
+      </div>
+      <button onclick="addToCart('Mendoan', 1000)">Tambah</button>
+</div>
+</div>
+
+  <!-- Keranjang -->
+  <div class="menu-grid">
+  <div class="cart">
+    <h2>Keranjang Pesanan</h2>
+    <ul id="cart"></ul>
+    <p id="total">Total: Rp0</p>
+    <button onclick="sendToWhatsApp()">Pesan Sekarang</button>
+  </div>
+  </div><div></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
