@@ -1,0 +1,161 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  min-height: 100vh;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-nama {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-nama label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-nama input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px; /* optional supaya grid tidak terlalu lebar */
+  margin: 0 auto;
+}
+
+.menu-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.menu-item h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.menu-item .harga {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.qty-control {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.qty-control button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu-item button {
+  padding: 8px 12px;
+  background-color: #3490dc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-item button:hover {
+  background-color: #2779bd;
+}
+
+.cart {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin-top: 30px;
+}
+
+.cart h2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.cart button {
+  padding: 5px 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.cart button:hover {
+  opacity: 0.8;
+}
+
+.cart #total {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cart > button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #38c172;
+  color: #fff;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+.cart > button:hover {
+  background-color: #2d995b;
+}
